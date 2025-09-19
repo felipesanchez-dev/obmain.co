@@ -4,7 +4,6 @@ import NavLink from "@components/ui/links/NavLink.astro";
 import enStrings from "@utils/navigation.ts";
 import frStrings from "@utils/fr/navigation.ts";
 import BrandLogo from "@components/BrandLogo.astro";
-import LanguagePicker from "@components/ui/LanguagePicker.astro";
 
 const strings = Astro.currentLocale === "en" ? enStrings : frStrings;
 const homeUrl = Astro.currentLocale === "" ? "" : "/";
