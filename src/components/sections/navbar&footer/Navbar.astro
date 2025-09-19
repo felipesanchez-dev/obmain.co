@@ -7,7 +7,7 @@ import BrandLogo from "@components/BrandLogo.astro";
 import LanguagePicker from "@components/ui/LanguagePicker.astro";
 
 const strings = Astro.currentLocale === "en" ? enStrings : frStrings;
-const homeUrl = Astro.currentLocale === "en" ? "/en" : "/";
+const homeUrl = Astro.currentLocale === "" ? "" : "/";
 ---
 
 <header
@@ -19,14 +19,22 @@ const homeUrl = Astro.currentLocale === "en" ? "/en" : "/";
   >
     <div class="flex items-center justify-between">
       <a
-        class="group flex-none rounded-xl text-3xl font-bold outline-hidden duration-300 hover:scale-105 focus-visible:ring-4 dark:ring-yellow-300/50 dark:hover:shadow-yellow-300/25 dark:focus:outline-hidden"
+        class="group flex-none rounded-xl outline-hidden duration-300 hover:scale-105 focus-visible:ring-4 dark:ring-yellow-300/50 dark:hover:shadow-yellow-300/25 dark:focus:outline-hidden"
         href={homeUrl}
         aria-label="Brand"
       >
-      OBMAIN
-        <!-- <BrandLogo
-          class="h-auto w-28 transition-transform duration-300 group-hover:scale-105"
-        /> -->
+        <div class="flex items-center gap-1">
+          <BrandLogo
+            class="h-auto w-28 transition-transform duration-300 group-hover:scale-105"
+          />
+          <div class="flex flex-col leading-none">
+            <span class="text-2xl font-bold" style="color:#8a0205;">OBMAIN</span
+            >
+            <span class="text-sm font-semibold" style="color:#fbaf19;"
+              >INGENIERÍA</span
+            >
+          </div>
+        </div>
       </a>
       <div class="mr-6 ml-auto md:hidden">
         <button
@@ -84,7 +92,6 @@ const homeUrl = Astro.currentLocale === "en" ? "/en" : "/";
           ))
         }
 
-        <LanguagePicker />
         <span class="hidden md:inline-block">
           <ThemeIcon />
         </span>
