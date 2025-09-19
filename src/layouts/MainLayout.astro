@@ -1,12 +1,10 @@
 ---
-// Importing necessary components
 import Meta from "@components/Meta.astro";
 import Navbar from "@components/sections/navbar&footer/Navbar.astro";
 import FooterSection from "@components/sections/navbar&footer/FooterSection.astro";
 import { SITE } from "@data/constants";
 import "@styles/global.css";
 
-// Setting expected props
 const {
   title = SITE.title,
   meta,
@@ -16,7 +14,6 @@ const {
   customOgTitle = null,
 } = Astro.props;
 
-// Interface to type-check the properties
 interface Props {
   title?: string;
   meta?: string;
@@ -29,7 +26,6 @@ interface Props {
 
 <html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
   <head>
-    {/* Adding metadata to the HTML document */}
     <Meta
       meta={meta}
       structuredData={structuredData}
@@ -39,10 +35,8 @@ interface Props {
         `${title} | OBMAIN Construcción y Mantenimiento`}
     />
 
-    {/* Define the title of the page */}
     <title>{title}</title>
     <script is:inline>
-      // Script to handle dark mode. It will check if the theme is stored in localStorage or if dark theme is preferred by system settings
       if (
         localStorage.getItem("hs_theme") === "dark" ||
         (!("hs_theme" in localStorage) &&
@@ -60,12 +54,6 @@ interface Props {
   <body
     class="flex min-h-screen flex-col bg-neutral-200 selection:bg-yellow-400 selection:text-neutral-700 dark:bg-neutral-800"
   >
-    {
-      /*
-    Setting up the main structure of the page.
-    The Navbar is placed at the top, with a slot for the main content and FooterSection at the bottom.
-    */
-    }
     <div
       class="mx-auto w-full max-w-(--breakpoint-2xl) flex-grow px-4 sm:px-6 lg:px-8"
     >
@@ -76,11 +64,9 @@ interface Props {
     </div>
     <!-- <FooterSection /> -->
     <script>
-      // https://preline.co
       import "preline/preline.js";
     </script>
     <style>
-      /* CSS rules for the page scrollbar */
       .scrollbar-hide::-webkit-scrollbar {
         display: none;
       }

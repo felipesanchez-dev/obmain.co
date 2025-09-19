@@ -5,24 +5,33 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  /* https://tailwindcss.com/docs/colors#customizing-your-colors */
   --color-*: initial;
   --color-transparent: transparent;
   --color-current: currentColor;
   --color-black: #000;
   --color-white: #fff;
 
-  --color-gray-50: oklch(0.985 0.002 247.839);
-  --color-gray-100: oklch(0.967 0.003 264.542);
-  --color-gray-200: oklch(0.928 0.006 264.531);
-  --color-gray-300: oklch(0.872 0.01 258.338);
-  --color-gray-400: oklch(0.707 0.022 261.325);
-  --color-gray-500: oklch(0.551 0.027 264.364);
-  --color-gray-600: oklch(0.446 0.03 256.802);
-  --color-gray-700: oklch(0.373 0.034 259.733);
-  --color-gray-800: oklch(0.278 0.033 256.848);
-  --color-gray-900: oklch(0.21 0.034 264.665);
-  --color-gray-950: oklch(0.13 0.028 261.692);
+  /* Colores Corporativos */
+  --color-corporate-red: #A42023;
+  --color-corporate-red-hover: #C82831;
+  --color-corporate-red-dark: #7A1A1C;
+  --color-corporate-yellow: #F3B329;
+  --color-corporate-yellow-light: #F9D374;
+  --color-corporate-gray-dark: #343A40;
+  --color-corporate-gray-light: #F8F9FA;
+  --color-corporate-white: #FFFFFF;
+
+  --color-gray-50: #F8F9FA;
+  --color-gray-100: #E9ECEF;
+  --color-gray-200: #DEE2E6;
+  --color-gray-300: #CED4DA;
+  --color-gray-400: #ADB5BD;
+  --color-gray-500: #6C757D;
+  --color-gray-600: #495057;
+  --color-gray-700: #343A40;
+  --color-gray-800: #212529;
+  --color-gray-900: #1A1D20;
+  --color-gray-950: #0F1113;
 
   --color-indigo-50: oklch(0.962 0.018 272.314);
   --color-indigo-100: oklch(0.93 0.034 272.788);
@@ -48,17 +57,17 @@
   --color-neutral-900: oklch(0.205 0 0);
   --color-neutral-950: oklch(0.145 0 0);
 
-  --color-yellow-50: oklch(0.987 0.026 102.212);
-  --color-yellow-100: oklch(0.973 0.071 103.193);
-  --color-yellow-200: oklch(0.945 0.129 101.54);
-  --color-yellow-300: oklch(0.905 0.182 98.111);
-  --color-yellow-400: oklch(0.852 0.199 91.936);
-  --color-yellow-500: oklch(0.795 0.184 86.047);
-  --color-yellow-600: oklch(0.681 0.162 75.834);
-  --color-yellow-700: oklch(0.554 0.135 66.442);
-  --color-yellow-800: oklch(0.476 0.114 61.907);
-  --color-yellow-900: oklch(0.421 0.095 57.708);
-  --color-yellow-950: oklch(0.286 0.066 53.813);
+  --color-yellow-50: #FFFCF5;
+  --color-yellow-100: #FEF7E0;
+  --color-yellow-200: #FDECC8;
+  --color-yellow-300: #FCE09B;
+  --color-yellow-400: #F9D374;
+  --color-yellow-500: #F3B329;
+  --color-yellow-600: #E09900;
+  --color-yellow-700: #B87503;
+  --color-yellow-800: #945D08;
+  --color-yellow-900: #7A4D0B;
+  --color-yellow-950: #472805;
 
   --color-orange-50: oklch(0.98 0.016 73.684);
   --color-orange-100: oklch(0.954 0.038 75.164);
@@ -72,17 +81,17 @@
   --color-orange-900: oklch(0.408 0.123 38.172);
   --color-orange-950: oklch(0.266 0.079 36.259);
 
-  --color-red-50: oklch(0.971 0.013 17.38);
-  --color-red-100: oklch(0.936 0.032 17.717);
-  --color-red-200: oklch(0.885 0.062 18.334);
-  --color-red-300: oklch(0.808 0.114 19.571);
-  --color-red-400: oklch(0.704 0.191 22.216);
-  --color-red-500: oklch(0.637 0.237 25.331);
-  --color-red-600: oklch(0.577 0.245 27.325);
-  --color-red-700: oklch(0.505 0.213 27.518);
-  --color-red-800: oklch(0.444 0.177 26.899);
-  --color-red-900: oklch(0.396 0.141 25.723);
-  --color-red-950: oklch(0.258 0.092 26.042);
+  --color-red-50: #FDF2F3;
+  --color-red-100: #FCE7E8;
+  --color-red-200: #F9D2D5;
+  --color-red-300: #F4AFB4;
+  --color-red-400: #ED8189;
+  --color-red-500: #E35963;
+  --color-red-600: #D03544;
+  --color-red-700: #A42023;
+  --color-red-800: #881E21;
+  --color-red-900: #7A1A1C;
+  --color-red-950: #420D0E;
 
   --color-zinc-50: oklch(0.985 0 0);
   --color-zinc-100: oklch(0.967 0.001 286.375);
@@ -97,14 +106,6 @@
   --color-zinc-950: oklch(0.141 0.005 285.823);
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,

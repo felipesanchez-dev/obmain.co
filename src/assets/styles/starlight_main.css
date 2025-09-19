@@ -8,44 +8,44 @@
 }
 /* Dark mode colors. */
 :root {
-    --primary-button-hover: #ff801f;
-    --backdrop-color: #272727cc;
-    --sl-color-accent: #ff801f;
-    --sl-color-accent-high: #ffa057;
-    --sl-color-accent-low: #562800;
-    --sl-color-black: #181818;
-    --sl-color-gray-1: #eee;
-    --sl-color-gray-2: #c2c2c2;
-    --sl-color-gray-3: #8b8b8b;
-    --sl-color-gray-4: #585858;
-    --sl-color-gray-5: #383838;
-    --sl-color-gray-6: #272727;
-    --sl-color-white: #fff;
-    --yellow-hsl: 43.3, 96.4%, 56.3%;
-    --overlay-yellow: hsla(var(--yellow-hsl), .2);
-    --border: hsla(var(--border-neutral), .4);
-    --border-neutral: 0, 0%, 25.1%;
+    --primary-button-hover: #C82831;
+    --backdrop-color: #343A40cc;
+    --sl-color-accent: #A42023;
+    --sl-color-accent-high: #F3B329;
+    --sl-color-accent-low: #7A1A1C;
+    --sl-color-black: #343A40;
+    --sl-color-gray-1: #F8F9FA;
+    --sl-color-gray-2: #E9ECEF;
+    --sl-color-gray-3: #ADB5BD;
+    --sl-color-gray-4: #6C757D;
+    --sl-color-gray-5: #495057;
+    --sl-color-gray-6: #343A40;
+    --sl-color-white: #FFFFFF;
+    --yellow-hsl: 45, 85%, 56%;
+    --overlay-yellow: hsla(var(--yellow-hsl), .15);
+    --border: hsla(var(--border-neutral), .3);
+    --border-neutral: 210, 9%, 31%;
 }
 
 /* Light mode colors. */
 :root[data-theme='light'] {
-    --primary-button-hover: #ff801f;
-    --backdrop-color: #f6f6f699;
-    --sl-color-accent: #f76b15;
-    --sl-color-accent-high: #562800;
-    --sl-color-accent-low: #ffa057;
-    --sl-color-black: #fff;
-    --sl-color-gray-1: #272727;
-    --sl-color-gray-2: #383838;
-    --sl-color-gray-3: #585858;
-    --sl-color-gray-4: #8b8b8b;
-    --sl-color-gray-5: #c2c2c2;
-    --sl-color-gray-6: #eee;
-    --sl-color-gray-7: #f6f6f6;
-    --sl-color-white: #181818;
-    --yellow-hsl: 47.9, 95.8%, 53.1%;
-    --border-yellow: 54.9, 96.7%, 88%;
-    --border: hsla(var(--border-yellow), .4);
+    --primary-button-hover: #C82831;
+    --backdrop-color: #F8F9FAcc;
+    --sl-color-accent: #A42023;
+    --sl-color-accent-high: #7A1A1C;
+    --sl-color-accent-low: #F3B329;
+    --sl-color-black: #FFFFFF;
+    --sl-color-gray-1: #343A40;
+    --sl-color-gray-2: #495057;
+    --sl-color-gray-3: #6C757D;
+    --sl-color-gray-4: #ADB5BD;
+    --sl-color-gray-5: #CED4DA;
+    --sl-color-gray-6: #E9ECEF;
+    --sl-color-gray-7: #F8F9FA;
+    --sl-color-white: #343A40;
+    --yellow-hsl: 45, 85%, 56%;
+    --border-yellow: 45, 85%, 90%;
+    --border: hsla(var(--border-yellow), .5);
 }
 
 .page {

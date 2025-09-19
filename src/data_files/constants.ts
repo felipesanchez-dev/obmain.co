@@ -1,14 +1,14 @@
-import ogImageSrc from "@images/social.png";
+import ogImageSrc from "@images/obmain.png";
 
 export const SITE = {
-  title: "OBMAIN SAS",
+  title: "OBMAIN",
   tagline: "Construcción y Mantenimiento Eléctrico, Mecánico y Civil en Tolima",
   description:
-    "OBMAIN SAS es una empresa del sector de la construcción y el mantenimiento eléctrico y mecánico en Ibagué, Tolima. Realizamos obras civiles, mecánicas, eléctricas y estructurales en el sector público y privado, cumpliendo con estándares de calidad y normatividad vigente.",
+    "OBMAIN es una empresa del sector de la construcción y el mantenimiento eléctrico y mecánico en Ibagué, Tolima. Realizamos obras civiles, mecánicas, eléctricas y estructurales en el sector público y privado, cumpliendo con estándares de calidad y normatividad vigente.",
   description_short:
     "Obras civiles, mantenimiento eléctrico, mecánico y estructural en Tolima.",
   url: "https://www.obmain.co",
-  author: "OBMAIN SAS",
+  author: "OBMAIN",
 };
 
 export const SEO = {
@@ -17,7 +17,7 @@ export const SEO = {
   structuredData: {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    inLanguage: "es-CO",
+    inLanguage: ["es-CO", "en-US"],
     url: SITE.url,
     name: SITE.title,
     description: SITE.description,
@@ -55,10 +55,10 @@ export const OG = {
   locale: "es_CO",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title} – Construcción y Mantenimiento en Tolima`,
+  title: `${SITE.title} - Construcción y Mantenimiento en Tolima`,
   description:
-    "OBMAIN SAS ofrece construcción, obras civiles, mantenimiento eléctrico y mecánico en Ibagué y Tolima. Servicios confiables, con personal calificado y cumplimiento de normatividad legal vigente.",
-  image: ogImageSrc, // reemplázalo por tu logo o preview real: https://www.obmain.co/obmain-preview.jpg
+    "OBMAIN ofrece construcción, obras civiles, mantenimiento eléctrico y mecánico en Ibagué y Tolima. Servicios confiables, con personal calificado y cumplimiento de normatividad legal vigente.",
+  image: ogImageSrc,
 };
 
 export const partnersData = [
