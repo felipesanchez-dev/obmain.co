@@ -14,7 +14,6 @@ import featureImage from "@images/construction-workers.avif";
 import FeaturesNavs from "@/components/sections/features/FeaturesNavs.astro";
 import construction from "@images/construction-image.avif";
 
-
 // import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
 // import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 // import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
@@ -23,8 +22,6 @@ import construction from "@images/construction-image.avif";
 // import faqs from "@data/faqs.json";
 // import pricing from "@data/pricing.json";
 // import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
-
-
 ---
 
 <MainLayout>
@@ -46,67 +43,66 @@ import construction from "@images/construction-image.avif";
     alts={[
       "OBMAIN - Logo de la empresa",
       "Celsia - Empresa de energía",
-      "Obmain - Empresa de construcción y mantenimiento"
+      "Obmain - Empresa de construcción y mantenimiento",
     ]}
   />
 
-   <ClientsSection
+  <ClientsSection
     title="Nuestros Clientes de Confianza"
     subTitle="Trabajamos con empresas líderes del sector público y privado"
     partners={[
       {
         name: "Celsia",
         icon: celsiaLogo,
-        href: "https://celsia.com"
+        href: "https://celsia.com",
       },
       {
         name: "OBMAIN",
         icon: obmainLogo,
-        href: "#"
+        href: "#",
       },
     ]}
   />
 
- <FeaturesGeneral
-    title="Meeting Industry Demands"
-    subTitle="At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors. From cutting-edge tools to expert services, we're dedicated to helping you overcome obstacles and achieve your goals."
+  <FeaturesGeneral
+    title="Ingeniería y Construcción de Confianza"
+    subTitle="En OBMAIN brindamos soluciones integrales en obras civiles, eléctricas, mecánicas y estructurales. Con un equipo altamente calificado, garantizamos calidad, cumplimiento y seguridad en cada proyecto para el sector público y privado."
     src={featureImage}
-    alt="ScrewFast products in floating boxes"
+    alt="Servicios de ingeniería y construcción OBMAIN"
     features={features}
   />
 
-   <FeaturesNavs
-  title={`Personaliza las soluciones de <span class="text-[#8b0304] dark:text-[#8b0304] font-bold">OBMAIN</span> <span class="text-yellow-500 dark:text-yellow-400 font-medium">INGENIERÍA</span> para satisfacer las necesidades de tus proyectos en construcción, mantenimiento eléctrico y obras civiles.`}
-  tabs={[
-    {
-      heading: "Obras Civiles",
-      content:
-        "Desde edificaciones hasta obras de drenaje y vías, en OBMAIN INGENIERÍA ejecutamos proyectos de construcción con materiales de alta calidad y personal especializado.",
-      svg: "house",
-      src: construction,
-      alt: "Estructura metálica en construcción con grúa en obra civil",
-      first: true,
-    },
-    {
-      heading: "Servicios Eléctricos",
-      content:
-        "Brindamos mantenimiento preventivo y correctivo en subestaciones eléctricas, mediciones de resistividad y sistemas de puesta a tierra con los más altos estándares técnicos.",
-      svg: "tools",
-      src: construction,
-      alt: "Equipo eléctrico en subestación con personal técnico",
-      second: true,
-    },
-    {
-      heading: "Soluciones Mecánicas",
-      content:
-        "Ofrecemos construcción y mantenimiento de estructuras, reparación de sistemas industriales y adecuaciones mecánicas para optimizar la operación de tus proyectos.",
-      svg: "dashboard",
-      src: construction,
-      alt: "Estructura metálica industrial y piezas mecánicas",
-    },
-  ]}
-/>
-
+  <FeaturesNavs
+    title={`Personaliza las soluciones de <span class="text-[#8b0304] dark:text-[#8b0304] font-bold">OBMAIN</span> <span class="text-yellow-500 dark:text-yellow-400 font-medium">INGENIERÍA</span> para satisfacer las necesidades de tus proyectos en construcción, mantenimiento eléctrico y obras civiles.`}
+    tabs={[
+      {
+        heading: "Obras Civiles",
+        content:
+          "Desde edificaciones hasta obras de drenaje y vías, en OBMAIN INGENIERÍA ejecutamos proyectos de construcción con materiales de alta calidad y personal especializado.",
+        svg: "house",
+        src: construction,
+        alt: "Estructura metálica en construcción con grúa en obra civil",
+        first: true,
+      },
+      {
+        heading: "Servicios Eléctricos",
+        content:
+          "Brindamos mantenimiento preventivo y correctivo en subestaciones eléctricas, mediciones de resistividad y sistemas de puesta a tierra con los más altos estándares técnicos.",
+        svg: "tools",
+        src: construction,
+        alt: "Equipo eléctrico en subestación con personal técnico",
+        second: true,
+      },
+      {
+        heading: "Soluciones Mecánicas",
+        content:
+          "Ofrecemos construcción y mantenimiento de estructuras, reparación de sistemas industriales y adecuaciones mecánicas para optimizar la operación de tus proyectos.",
+        svg: "dashboard",
+        src: construction,
+        alt: "Estructura metálica industrial y piezas mecánicas",
+      },
+    ]}
+  />
 
   <!-- <TestimonialsSection
     title="Fast-Track Your Projects"
