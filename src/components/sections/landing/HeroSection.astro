@@ -1,5 +1,4 @@
 ---
-// Import the necessary dependencies
 import { Image } from "astro:assets";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
@@ -17,8 +16,8 @@ const {
   starCount,
   rating,
   reviews,
-  images,
-  alts,
+  src,
+  alt,
 } = Astro.props;
 
 interface Props {
@@ -33,8 +32,8 @@ interface Props {
   starCount?: number;
   rating?: string;
   reviews?: string;
-  images?: Array<any>;
-  alts?: Array<string>;
+  src?: any;
+  alt?: string;
 }
 ---
 
@@ -77,90 +76,20 @@ interface Props {
     }
   </div>
   <div class="flex w-full">
-    <div class="relative top-12 overflow-hidden h-96 w-full">
+    <div
+      class="top-12 overflow-hidden rounded-2xl shadow-lg md:top-0 md:rounded-tl-[6rem] lg:rounded-tl-[8rem]"
+    >
       {
-        images && images.length > 0 && (
-          <div class="relative w-full h-full" id="hero-carousel">
-            {images.map((image, index) => (
-              <div 
-                class={`hero-slide absolute inset-0 transition-opacity duration-1000 ${index === 0 ? 'opacity-100' : 'opacity-0'}`}
-                data-slide={index}
-              >
-                <Image
-                  src={image}
-                  alt={alts?.[index] || `Hero image ${index + 1}`}
-                  class="h-full w-full scale-110 rounded-r-[15px] object-cover object-center"
-                  draggable="false"
-                  loading={index === 0 ? "eager" : "lazy"}
-                  quality="high"
-                />
-              </div>
-            ))}
-          </div>
+        src && alt && (
+          <Image
+            src={src}
+            alt={alt}
+            class="h-full w-full scale-110 rounded-2xl object-cover object-center"
+            draggable={false}
+            loading="eager"
+          />
         )
       }
     </div>
   </div>
 </section>
-
-<script>
-  class HeroCarousel {
-    private slides: NodeListOf<HTMLElement>;
-    private currentSlide: number = 0;
-    private intervalId: number | null = null;
-    
-    constructor() {
-      this.slides = document.querySelectorAll('.hero-slide');
-      this.init();
-    }
-    
-    private init(): void {
-      if (this.slides.length <= 1) return;
-      
-      this.startCarousel();
-      
-      // Pausar en hover
-      const carousel = document.getElementById('hero-carousel');
-      if (carousel) {
-        carousel.addEventListener('mouseenter', () => this.stopCarousel());
-        carousel.addEventListener('mouseleave', () => this.startCarousel());
-      }
-    }
-    
-    private showSlide(index: number): void {
-      this.slides.forEach((slide, i) => {
-        slide.classList.toggle('opacity-100', i === index);
-        slide.classList.toggle('opacity-0', i !== index);
-      });
-    }
-    
-    private nextSlide(): void {
-      this.currentSlide = (this.currentSlide + 1) % this.slides.length;
-      this.showSlide(this.currentSlide);
-    }
-    
-    private startCarousel(): void {
-      if (this.intervalId) return;
-      this.intervalId = window.setInterval(() => {
-        this.nextSlide();
-      }, 3000); // Cambio cada 3 segundos
-    }
-    
-    private stopCarousel(): void {
-      if (this.intervalId) {
-        clearInterval(this.intervalId);
-        this.intervalId = null;
-      }
-    }
-  }
-  
-  // Inicializar el carrusel cuando el DOM esté listo
-  document.addEventListener('DOMContentLoaded', () => {
-    new HeroCarousel();
-  });
-  
-  // Reinicializar en navegación de Astro (para SPA)
-  document.addEventListener('astro:page-load', () => {
-    new HeroCarousel();
-  });
-</script>

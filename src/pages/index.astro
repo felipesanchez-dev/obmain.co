@@ -1,34 +1,39 @@
 ---
-// Import the necessary components
-import MainLayout from "@/layouts/MainLayout.astro";
-import HeroSection from "@/components/sections/landing/HeroSection.astro";
 import ClientsSection from "@/components/sections/landing/ClientsSection.astro";
-import celsiaLogo from "@/images/celsia.png";
-import obmainLogo from "@/images/obmain.png";
-import imagen1 from "@/images/before-after.avif";
-import imagen2 from "@/images/construction-workers.avif";
-import imagen3 from "@/images/aerial-view.avif";
+import HeroSection from "@/components/sections/landing/HeroSection.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+import heroImage from "@images/obmain/hero-fondo.png";
+import { partnersData } from "@/data_files/constants";
 import FeaturesGeneral from "@/components/sections/features/FeaturesGeneral.astro";
 import features from "@data/features.json";
-import featureImage from "@images/construction-workers.avif";
+import featureImage from "@images/obmain/feature.png";
 import FeaturesNavs from "@/components/sections/features/FeaturesNavs.astro";
-import construction from "@images/construction-image.avif";
 
-// import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
+// import HeroSection from "@components/sections/landing/HeroSection.astro";
+// import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
+// import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 // import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 // import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
 // import PricingSection from "@components/sections/pricing/PricingSection.astro";
 // import FAQ from "@components/sections/misc/FAQ.astro";
+// import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 // import faqs from "@data/faqs.json";
 // import pricing from "@data/pricing.json";
-// import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
+import tools from "@images/obmain/automated-tools.avif";
+
+// const avatarSrcs: Array<string> = [
+//    "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+//    "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+//    "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
+//    "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+//  ];
 ---
 
 <MainLayout>
   <!-- <AnnouncementBanner
     btnId="dismiss-button"
-    btnTitle="Contacta con nosotros"
-    url="#"
+    btnTitle="Explore ScrewFast on GitHub"
+    url="https://github.com/mearashadowfax/ScrewFast"
   /> -->
 
   <HeroSection
@@ -39,29 +44,15 @@ import construction from "@images/construction-image.avif";
     subTitle="Somos especialistas en obras civiles, eléctricas, mecánicas y estructurales, ofreciendo soluciones integrales para el sector público y privado. Garantizamos calidad, cumplimiento y seguridad en cada proyecto de construcción y mantenimiento."
     primaryBtn="Contacta con nosotros"
     primaryBtnURL="/contact"
-    images={[imagen1, imagen2, imagen3]}
-    alts={[
-      "OBMAIN - Logo de la empresa",
-      "Celsia - Empresa de energía",
-      "Obmain - Empresa de construcción y mantenimiento",
-    ]}
+    starCount={4}
+    src={heroImage}
+    alt="OBMAIN - Imagenes de ingeniería y construcción"
   />
 
   <ClientsSection
-    title="Nuestros Clientes de Confianza"
+    title="Algunos de nuestros Clientes"
     subTitle="Trabajamos con empresas líderes del sector público y privado"
-    partners={[
-      {
-        name: "Celsia",
-        icon: celsiaLogo,
-        href: "https://celsia.com",
-      },
-      {
-        name: "OBMAIN",
-        icon: obmainLogo,
-        href: "#",
-      },
-    ]}
+    partners={partnersData}
   />
 
   <FeaturesGeneral
@@ -73,32 +64,37 @@ import construction from "@images/construction-image.avif";
   />
 
   <FeaturesNavs
-    title={`Personaliza las soluciones en <span class="text-[#8b0304] dark:text-[#8b0304] font-bold">OBMAIN</span> <span class="text-yellow-500 dark:text-yellow-400 font-medium">INGENIERÍA</span> para satisfacer las necesidades de tus proyectos`}
+    title={`En <span class="text-[#8b0304] dark:text-[#8b0304] font-extrabold tracking-wide">OBMAIN</span> <span class="text-yellow-500 dark:text-yellow-400 font-semibold">INGENIERÍA</span>`}
+    description={`
+      <p class="text-base text-neutral-500 dark:text-neutral-400 leading-relaxed">
+        Transformamos sus ideas en resultados confiables y duraderos.
+      </p>
+    `}
     tabs={[
       {
         heading: "Obras Civiles",
         content:
-          "Desde edificaciones hasta obras de drenaje y vías, en OBMAIN INGENIERÍA ejecutamos proyectos de construcción con materiales de alta calidad y personal especializado.",
+          "Diseñamos y ejecutamos proyectos de infraestructura con precisión y calidad. Desde edificaciones y vías hasta sistemas de drenaje, entregamos soluciones duraderas que impulsan el desarrollo.",
         svg: "house",
-        src: construction,
+        src: tools,
         alt: "Estructura metálica en construcción con grúa en obra civil",
         first: true,
       },
       {
         heading: "Servicios Eléctricos",
         content:
-          "Brindamos mantenimiento preventivo y correctivo en subestaciones eléctricas, mediciones de resistividad y sistemas de puesta a tierra con los más altos estándares técnicos.",
+          "Garantizamos seguridad y eficiencia en instalaciones eléctricas. Realizamos mantenimiento en subestaciones, estudios de resistividad y sistemas de puesta a tierra con tecnología y personal especializado.",
         svg: "tools",
-        src: construction,
+        src: tools,
         alt: "Equipo eléctrico en subestación con personal técnico",
         second: true,
       },
       {
         heading: "Soluciones Mecánicas",
         content:
-          "Ofrecemos construcción y mantenimiento de estructuras, reparación de sistemas industriales y adecuaciones mecánicas para optimizar la operación de tus proyectos.",
+          "Optimizamos procesos industriales con soluciones a la medida. Construcción y mantenimiento de estructuras, reparaciones de sistemas y adecuaciones mecánicas para maximizar la productividad de tu operación.",
         svg: "dashboard",
-        src: construction,
+        src: tools,
         alt: "Estructura metálica industrial y piezas mecánicas",
       },
     ]}
@@ -139,13 +135,13 @@ import construction from "@images/construction-image.avif";
         description: "quicker assembly using innovative fastening solutions",
       },
     ]}
-  />
+  /> -->
 
-  <PricingSection pricing={pricing} />
+  <!-- <PricingSection pricing={pricing} /> -->
 
-  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
+  <!-- <FAQ title="Frequently<br />asked questions" faqs={faqs} /> -->
 
-  <HeroSectionAlt
+  <!-- <HeroSectionAlt
     title="Let's Build Together"
     subTitle="ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
     url="https://github.com/mearashadowfax/ScrewFast"

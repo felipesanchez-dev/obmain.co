@@ -9,41 +9,41 @@
 
 /* Dark mode colors. */
 :root {
-  --border: hsla(var(--border-neutral), 0.3);
-  --backdrop-color: #343A40cc;
-  --sl-color-accent: #A42023;
-  --sl-color-accent-high: #F3B329;
-  --sl-color-accent-low: #7A1A1C;
-  --sl-color-black: #343A40;
-  --sl-color-gray-1: #F8F9FA;
-  --sl-color-gray-2: #E9ECEF;
-  --sl-color-gray-3: #ADB5BD;
-  --sl-color-gray-4: #6C757D;
-  --sl-color-gray-5: #495057;
-  --sl-color-gray-6: #343A40;
-  --sl-color-white: #FFFFFF;
-  --list-marker-color: #F3B329;
-  --border-neutral: 210, 9%, 31%;
+  --border: hsla(var(--border-neutral), 0.4);
+  --backdrop-color: #272727cc;
+  --sl-color-accent: #ff801f;
+  --sl-color-accent-high: #ffa057;
+  --sl-color-accent-low: #562800;
+  --sl-color-black: #181818;
+  --sl-color-gray-1: #eee;
+  --sl-color-gray-2: #c2c2c2;
+  --sl-color-gray-3: #8b8b8b;
+  --sl-color-gray-4: #585858;
+  --sl-color-gray-5: #383838;
+  --sl-color-gray-6: #272727;
+  --sl-color-white: #fff;
+  --list-marker-color: #fb923c;
+  --border-neutral: 0, 0%, 25.1%;
 }
 
 /* Light mode colors. */
 :root[data-theme="light"] {
-  --border: hsla(var(--border-yellow), 0.5);
-  --backdrop-color: #F8F9FAcc;
-  --sl-color-accent: #A42023;
-  --sl-color-accent-high: #7A1A1C;
-  --sl-color-accent-low: #F3B329;
-  --sl-color-black: #FFFFFF;
-  --sl-color-gray-1: #343A40;
-  --sl-color-gray-2: #495057;
-  --sl-color-gray-3: #6C757D;
-  --sl-color-gray-4: #ADB5BD;
-  --sl-color-gray-5: #CED4DA;
-  --sl-color-gray-6: #E9ECEF;
-  --sl-color-gray-7: #F8F9FA;
-  --sl-color-white: #343A40;
-  --list-marker-color: #F3B329;
-  --border-yellow: 45, 85%, 90%;
+  --border: hsla(var(--border-yellow), 0.4);
+  --backdrop-color: #f6f6f699;
+  --sl-color-accent: #b73d00;
+  --sl-color-accent-high: #562800;
+  --sl-color-accent-low: #ffa057;
+  --sl-color-black: #fff;
+  --sl-color-gray-1: #272727;
+  --sl-color-gray-2: #383838;
+  --sl-color-gray-3: #585858;
+  --sl-color-gray-4: #8b8b8b;
+  --sl-color-gray-5: #c2c2c2;
+  --sl-color-gray-6: #eee;
+  --sl-color-gray-7: #f6f6f6;
+  --sl-color-white: #181818;
+  --list-marker-color: #fb923c;
+  --border-yellow: 54.9, 96.7%, 88%;
 }
 
 header {
@@ -117,17 +117,17 @@ article.card {
 }
 
 .starlight-aside--tip {
-  background: linear-gradient(45deg, #A42023, #F3B329);
+  background: linear-gradient(45deg, #ff512f, #f09819);
   border: none;
   border-radius: 0.5rem;
-  color: #7A1A1C;
+  color: #66350c;
 }
 
 .starlight-aside--note {
-  background: linear-gradient(45deg, #343A40, #6C757D);
+  background: linear-gradient(45deg, #00b4db, #2193b0);
   border: none;
   border-radius: 0.5rem;
-  color: #F8F9FA;
+  color: #004558;
 }
 
 .starlight-aside__icon {
@@ -135,13 +135,11 @@ article.card {
 }
 
 .starlight-aside--tip .starlight-aside__title {
-  color: #FFFFFF;
-  font-weight: 600;
+  color: #ffe0c2;
 }
 
 .starlight-aside--note .starlight-aside__title {
-  color: #F8F9FA;
-  font-weight: 600;
+  color: #bbf3fef7;
 }
 
 .sl-markdown-content ul:not(:where(.not-content *)) {

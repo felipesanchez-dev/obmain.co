@@ -90,47 +90,21 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
           ><Icon name="facebookFooter" />
         </FooterSocialLink>
 
-        {'x' in strings.socialLinks && (
-          <FooterSocialLink url={strings.socialLinks.x}
-            ><Icon name="xFooter" /></FooterSocialLink
-          >
-        )}
+        <FooterSocialLink url={strings.socialLinks.x}
+          ><Icon name="xFooter" /></FooterSocialLink
+        >
 
-        {'linkedin' in strings.socialLinks && (
-          <FooterSocialLink url={strings.socialLinks.linkedin}
-            ><Icon name="linkedinFooter" /></FooterSocialLink
-          >
-        )}
+        <FooterSocialLink url={strings.socialLinks.github}
+          ><Icon name="githubFooter" />
+        </FooterSocialLink>
 
-        {'github' in strings.socialLinks && (
-          <FooterSocialLink url={strings.socialLinks.github}
-            ><Icon name="githubFooter" />
-          </FooterSocialLink>
-        )}
+        <FooterSocialLink url={strings.socialLinks.google}
+          ><Icon name="googleFooter" />
+        </FooterSocialLink>
 
-        {'google' in strings.socialLinks && (
-          <FooterSocialLink url={strings.socialLinks.google}
-            ><Icon name="googleFooter" />
-          </FooterSocialLink>
-        )}
-
-        {'slack' in strings.socialLinks && (
-          <FooterSocialLink url={strings.socialLinks.slack}
-            ><Icon name="slackFooter" />
-          </FooterSocialLink>
-        )}
-
-        {'whatsapp' in strings.socialLinks && (
-          <FooterSocialLink url={strings.socialLinks.whatsapp}
-            ><Icon name="whatsappFooter" />
-          </FooterSocialLink>
-        )}
-
-        {'email' in strings.socialLinks && (
-          <FooterSocialLink url={strings.socialLinks.email}
-            ><Icon name="emailFooter" />
-          </FooterSocialLink>
-        )}
+        <FooterSocialLink url={strings.socialLinks.slack}
+          ><Icon name="slackFooter" />
+        </FooterSocialLink>
       </div>
     </div>
 
