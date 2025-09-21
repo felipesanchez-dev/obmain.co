@@ -67,7 +67,9 @@ const { title, subTitle, src, alt, features } = Astro.props;
         { features &&
           features.map((feature) => (
             <IconBlock heading={feature.heading} content={feature.content}>
-              <Icon name={feature.svg} />
+              <div class="custom-icon-color">
+                <Icon name={feature.svg} />
+              </div>
             </IconBlock>
           ))
         }
@@ -75,3 +77,22 @@ const { title, subTitle, src, alt, features } = Astro.props;
     </div>
   </div>
 </section>
+
+<style>
+  .custom-icon-color :global(svg) {
+    fill: #8b0304 !important;
+  }
+
+  .custom-icon-color :global(svg path) {
+    fill: #8b0304 !important;
+  }
+
+  /* Para modo oscuro mantenemos el mismo color */
+  :global(.dark) .custom-icon-color :global(svg) {
+    fill: #8b0304 !important;
+  }
+
+  :global(.dark) .custom-icon-color :global(svg path) {
+    fill: #8b0304 !important;
+  }
+</style>
