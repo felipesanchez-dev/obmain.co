@@ -5,7 +5,9 @@ import HeroSection from "@/components/sections/landing/HeroSection.astro";
 import ClientsSection from "@/components/sections/landing/ClientsSection.astro";
 import celsiaLogo from "@/images/celsia.png";
 import obmainLogo from "@/images/obmain.png";
-import socialLogo from "@/images/social.png";
+import imagen1 from "@/images/before-after.avif";
+import imagen2 from "@/images/construction-workers.avif";
+import imagen3 from "@/images/aerial-view.avif";
 // import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
 // import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 // import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
@@ -21,12 +23,6 @@ import socialLogo from "@/images/social.png";
 // import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 
 
-// const avatarSrcs: Array<string> = [
-//   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-//   "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-//   "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
-//   "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-// ];
 ---
 
 <MainLayout>
@@ -44,6 +40,12 @@ import socialLogo from "@/images/social.png";
     subTitle="Somos especialistas en obras civiles, eléctricas, mecánicas y estructurales, ofreciendo soluciones integrales para el sector público y privado. Garantizamos calidad, cumplimiento y seguridad en cada proyecto de construcción y mantenimiento."
     primaryBtn="Contacta con nosotros"
     primaryBtnURL="/contact"
+    images={[imagen1, imagen2, imagen3]}
+    alts={[
+      "OBMAIN - Logo de la empresa",
+      "Celsia - Empresa de energía",
+      "Obmain - Empresa de construcción y mantenimiento"
+    ]}
   />
 
    <ClientsSection
