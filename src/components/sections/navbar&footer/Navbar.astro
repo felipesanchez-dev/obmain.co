@@ -13,7 +13,8 @@ const homeUrl = Astro.currentLocale === "" ? "" : "/";
   class="sticky inset-x-0 top-4 z-50 flex w-full flex-wrap text-base md:flex-nowrap md:justify-start"
 >
   <nav
-    class="relative mx-4 w-full max-w-7xl rounded-[28px] border border-gray-200/40 bg-gradient-to-r from-white/95 via-gray-50/90 to-white/95 px-6 py-3.5 shadow-lg shadow-gray-300/15 backdrop-blur-xl transition-all duration-300 hover:shadow-xl hover:shadow-gray-400/20 md:flex md:items-center md:justify-between md:px-8 md:py-4 lg:px-10 xl:mx-auto dark:border-gray-600/40 dark:bg-gradient-to-r dark:from-gray-800/95 dark:via-gray-700/90 dark:to-gray-800/95 dark:shadow-lg dark:shadow-gray-900/25 dark:backdrop-blur-xl dark:hover:shadow-xl dark:hover:shadow-gray-900/35"
+    id="navbar"
+    class="navbar-scroll relative mx-4 w-full max-w-7xl rounded-[28px] border border-gray-200/40 bg-gradient-to-r from-white/95 via-gray-50/90 to-white/95 px-6 py-2 shadow-lg shadow-gray-300/15 backdrop-blur-xl transition-all duration-300 hover:shadow-xl hover:shadow-gray-400/20 md:flex md:items-center md:justify-between md:px-8 md:py-2.5 lg:px-10 xl:mx-auto dark:border-gray-600/40 dark:bg-gradient-to-r dark:from-gray-800/95 dark:via-gray-700/90 dark:to-gray-800/95 dark:shadow-lg dark:shadow-gray-900/25 dark:backdrop-blur-xl dark:hover:shadow-xl dark:hover:shadow-gray-900/35"
     aria-label="Global"
   >
     <div class="flex items-center justify-between">
@@ -201,4 +202,35 @@ const homeUrl = Astro.currentLocale === "" ? "" : "/";
       });
     });
   });
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    const scrollY = window.scrollY;
+    
+    if (scrollY > 50) {
+      navbar.classList.add('navbar-scrolled');
+    } else {
+      navbar.classList.remove('navbar-scrolled');
+    }
+  });
 </script>
+
+<style>
+  .navbar-scroll {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-scrolled {
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(20px);
+    border-color: rgba(229, 231, 235, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark .navbar-scrolled {
+    background: rgba(31, 41, 55, 0.4) !important;
+    border-color: rgba(75, 85, 99, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+</style>
